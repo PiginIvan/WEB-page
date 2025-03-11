@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASAVOT - Twitch Стример</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SASAVOT PAGE</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Информация</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#resources">Ресурсы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="content-block">
+        <h2>Кто такой SASAVOT?</h2>
+    
+        <div class="info-section">
+            <h3>Биография</h3>
+            <p>
+                SASAVOT (настоящее имя — Орлов Глеб Борисович) родился в 2000 году. С детства увлекался видеоиграми и компьютерами. 
+                <span class="more-text" id="bio-text">
+                    В юности активно играл в многопользовательские игры и начал вести записи своих матчей. 
+                    Позже решил попробовать себя в стриминге и создал канал на Twitch.
+                </span>
+                <span class="toggle-btn" onclick="toggleText('bio-text', this)">...</span>
+            </p>
+        </div>
+    
+        <div class="info-section">
+            <h3>Стримерская карьера</h3>
+            <p>
+                Свой первый стрим SASAVOT провел в 2015 году. Изначально аудитория была небольшой, но постепенно он 
+                набрал популярность благодаря
+                <span class="more-text" id="career-text">
+                    его харизме, навыкам в играх и взаимодействию с подписчиками. Сейчас у него тысячи подписчиков и 
+                    регулярные трансляции, которые привлекают большое количество зрителей.
+                </span>
+                <span class="toggle-btn" onclick="toggleText('career-text', this)">...</span>
+            </p>
+        </div>
+    
+        <div class="info-section">
+            <h3>Контент стримов</h3>
+            <p>
+                На своих стримах SASAVOT играет в разные жанры игр, общается с подписчиками, устраивает челленджи и 
+                турниры.
+                <span class="more-text" id="content-text">
+                    Основные игры: DOTA2, CS2, PUGB. Также он проводит IRL-стримы, где рассказывает о своей жизни и 
+                    отвечает на вопросы зрителей.
+                </span>
+                <span class="toggle-btn" onclick="toggleText('content-text', this)">...</span>
+            </p>
+        </div>
+    </section>    
+
+    <section id="gallery" class="content-block">
+        <h2>Галерея</h2>
+        <div class="slider">
+            <button id="prevBtn">◀</button>
+            <img id="sliderImage" src="images/image1.jpg" alt="SASAVOT">
+            <button id="nextBtn">▶</button>
+        </div>
+    </section>
+
+    <section id="resources" class="content-block">
+        <h2>Ресурсы SASAVOT</h2>
+        <ul class="links">
+            <li>
+                <a href="https://www.twitch.tv/sasavot" target="_blank">
+                    <img src="icons/twitch.svg" alt="Twitch"> Twitch
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@kiwkisquad" target="_blank">
+                    <img src="icons/youtube.svg" alt="YouTube"> YouTube
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/sasavot" target="_blank">
+                    <img src="icons/telegram.svg" alt="Telegram"> Telegram
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <button id="themeButton">Сменить тему</button>
+
+    <footer>
+        <h1>Мои ресурсы</h1>
+        <ul class="footer-links">
+            <li>
+                <a href="https://github.com/sasavot" target="_blank">
+                    <img src="icons/github.svg" alt="GitHub"> GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/sasavot" target="_blank">
+                    <img src="icons/telegram.svg" alt="Telegram"> Telegram
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
