@@ -1,27 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e1e;
-    color: white;
-    text-align: center;
-}
+@import url('variables.css');
 
 /* HEADER */
 header {
-    background-color: #6441a5;
-    padding: 30px 0;
+    background-color: var(--primary-color);
+    padding: var(--header-padding);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-dark);
 }
 
 header h1 {
     margin: 0;
     padding-bottom: 30px;
     font-size: 28px;
-    color: white;
+    color: var(--light-text);
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    text-align: center;
 }
 
 /* НАВИГАЦИЯ */
@@ -45,22 +48,21 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    background-color: #ff9900;
-    padding: 12px 20px;
-    border-radius: 8px;
+    color: var(--light-text);
+    background-color: var(--secondary-color);
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
     font-weight: bold;
     transition: 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-light);
 }
 
 nav ul li a:hover {
-    background-color: #e68500;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: var(--hover-color);
+    box-shadow: var(--shadow-medium);
     transform: scale(1.05);
 }
 
-/* ВЫРАВНИВАНИЕ ТЕКСТА */
 .content-block {
     padding: 40px 20px;
     max-width: 100%;
@@ -68,26 +70,24 @@ nav ul li a:hover {
     text-align: left;
 }
 
-/* КНОПКА "ПОКАЗАТЬ БОЛЬШЕ" */
 .more-text {
     display: none;
 }
 
 .toggle-btn {
-    color: #ff9900;
-    cursor: pointer; /* Курсор теперь указывает на кликабельный элемент */
+    color: var(--secondary-color);
+    cursor: pointer;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .toggle-btn:hover {
     text-decoration: underline;
-    color: #e68500;
+    color: var(--hover-color);
 }
 
-
 h2 {
-    border-bottom: 2px solid #ff9900;
+    border-bottom: 2px solid var(--secondary-color);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -110,7 +110,7 @@ h2 {
     background: none;
     border: none;
     font-size: 30px;
-    color: white;
+    color: var(--light-text);
     cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ h2 {
 }
 
 .links a {
-    color: #ff9900;
+    color: var(--secondary-color);
     font-weight: bold;
     text-decoration: none;
 }
@@ -136,8 +136,8 @@ h2 {
 
 /* КНОПКА СМЕНЫ ТЕМЫ */
 button {
-    background-color: #6441a5;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-text);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -148,13 +148,13 @@ button {
 }
 
 button:hover {
-    background-color: #563d82;
+    background-color: var(--hover-primary);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* FOOTER */
 footer {
-    background-color: #111;
+    background-color: var(--footer-bg);
     padding: 20px;
 }
 
@@ -169,7 +169,7 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: var(--light-text);
     text-decoration: none;
 }
 
@@ -177,33 +177,27 @@ footer {
     text-decoration: underline;
 }
 
-/* АДАПТИВНОСТЬ */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .slider img {
-        width: 100%;
-    }
-
-    button {
-        width: 90%;
-    }
-}
-
 /* ТЁМНАЯ ТЕМА */
 .dark-mode {
-    background-color: white;
-    color: black;
+    background-color: var(--light-text);
+    color: var(--dark-text);
 }
 
 .dark-mode header {
-    background-color: #ff9900;
+    background-color: var(--secondary-color);
 }
 
 .dark-mode button {
-    background-color: black;
-    color: white;
+    background-color: var(--dark-text);
+    color: var(--light-text);
+}
+
+/* АДАПТИВНОСТЬ (меньше 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 }
