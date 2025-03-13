@@ -201,3 +201,20 @@ footer {
         gap: 10px;
     }
 }
+
+/* АДАПТИВНОСТЬ (больше 1024px) */
+@media (min-width: 1024px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .content-block {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
